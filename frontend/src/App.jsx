@@ -38,7 +38,7 @@ function App() {
 
   const InitiateOrder = async (item) => {
     try {
-      const response = await axios.post("http://localhost:3001/order", item)
+      const response = await axios.post("https://razorpay-main.onrender.com/order", item)
       return response
     } catch (err) {
       console.error("Order initiation failed:", err)
@@ -48,7 +48,7 @@ function App() {
 
   const verifyPayment = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3001/success", data)
+      const res = await axios.post("https://razorpay-main.onrender.com/success", data)
       console.log(res)
       return res
     } catch (err) {
