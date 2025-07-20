@@ -7,6 +7,7 @@ import { useTiltEffect } from "./hooks/use-tilt-effect"
 import { Check, MonitorIcon as Running } from "lucide-react"
 import { ToastContainer, toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
+import { MdContentCopy } from "react-icons/md";
 
 import './App.css'
 
@@ -104,6 +105,16 @@ function App() {
         if (verifyRes && verifyRes.data.success) {
           toast.success("Payment Successful!")
           navigate("/")
+          toast.success("Your payment id:" , response.razorpay_payment_id, {autoClose:60000})
+          toast.success(<div>
+            {response.razorpay_payment_id} 
+            
+              <MdContentCopy className="copy" onClick={() => {
+                navigator.clipboard.writeText(response.razorpay_payment_id)
+                toast.success("Copied to Clipboard", { autoClose: 2000 })
+              }} />
+           
+          </div>, {autoClose:60000})
         } else {
           toast.error("Payment Verification Failed")
         }
@@ -124,9 +135,12 @@ function App() {
     rzp.open()
   }
 
+
+
   return (
     <div className="App">
       <ToastContainer />
+      {/* <MdContentCopy className="copy-icon" /> */}
       {/* <button onClick={purchase}>Pay ₹555 for Marathon</button> */}
       <section id="register" className="registration section bg-background-white relative">
         <div className="container">
