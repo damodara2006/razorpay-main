@@ -107,7 +107,7 @@ function App() {
           navigate("/")
           // toast.success("Your payment id:" , response.razorpay_payment_id, {autoClose:60000})
           toast.success(<div>
-            {response.razorpay_payment_id} 
+            {"Payment id: " }{response.razorpay_payment_id} 
             
               <MdContentCopy className="copy" onClick={() => {
                 navigator.clipboard.writeText(response.razorpay_payment_id)

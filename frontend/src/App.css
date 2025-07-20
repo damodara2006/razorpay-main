@@ -472,5 +472,7 @@ button:hover {
 }
 
 .copy:active{
+  transition: all;
+  animation-duration: 200ms;
   scale: 2;
 }
