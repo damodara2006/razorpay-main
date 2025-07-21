@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@ html, body {
   padding: 0;
 }
 
-/* App container */
+
 .App {
   min-height: 100vh;
   width: 100vw;
@@ -33,7 +33,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Section styles */
 .section {
   padding: 6rem 0;
   width: 100%;
@@ -62,7 +61,6 @@ html, body {
   padding-bottom: 0;
 }
 
-/* Section header */
 .section-header {
   text-align: center;
   margin-bottom: 6rem;
@@ -99,7 +97,6 @@ html, body {
   line-height: 1.6;
 }
 
-/* Pricing cards */
 .pricing-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -209,7 +206,6 @@ html, body {
   flex-shrink: 0;
 }
 
-/* Pricing button */
 .pricing-btn {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -230,7 +226,6 @@ html, body {
   background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
 }
 
-/* Registration form */
 .registration-content {
   display: flex;
   flex-direction: column;
@@ -447,7 +442,6 @@ html, body {
   }
 }
 
-/* Payment button specific styles */
 button {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
